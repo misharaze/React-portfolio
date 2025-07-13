@@ -37,6 +37,7 @@ import code from '../img/mobileApp/code.png'
 import platforme from '../img/mobileApp/iosandroid.png'
 import Design from '../img/mobileApp/uiDesign.png'
 import Performance from '../img/mobileApp/performance.png'
+
 const Home = () => {
 const navigate = useNavigate()
 
@@ -58,7 +59,7 @@ const handleNavigate = (projects) => {
       {/* Блок описания */}
       <div className="about_descr">
         <div className="title title_fz16about about_title">à propos de moi</div>
-        <div className="title title_fz36 about_subtitle">je m'appelle mish</div>
+        <div className="title title_fz36 about_subtitle">je m'appelle mis</div>
         <div className="divider"></div>
         <p className="about_text">
           Développeur web depuis maintenant 3 ans, je suis passionné par l’innovation technologique,
@@ -81,7 +82,7 @@ const handleNavigate = (projects) => {
           <div className="about_skills-circle">
             <FaComputer />
           </div>
-          <div className="title title_fz14">web dévellopeur</div>
+          <div className="title title_fz14">Web dévellopeur</div>
           <div className="about_skills-text">
             j’ai acquis une expertise solide dans la conception et le développement d’applications web
             et mobiles, maîtrisant des langages tels que HTML, CSS, Bootstrap, WordPress avec Elementor,

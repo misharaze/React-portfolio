@@ -46,7 +46,6 @@
     "@svgr/webpack": "^8.1.0",
     "file-loader": "^6.2.0",
     "resolve-url-loader": "^5.0.0",
-   
     "sass-loader": "^16.0.2"
   },
   "proxy": "http://localhost:3000/"

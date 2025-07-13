@@ -58,7 +58,7 @@ const handleNavigate = (projects) => {
       {/* Блок описания */}
       <div className="about_descr">
         <div className="title title_fz16about about_title">à propos de moi</div>
-        <div className="title title_fz36 about_subtitle">je m'appelle misha</div>
+        <div className="title title_fz36 about_subtitle">je m'appelle mish</div>
         <div className="divider"></div>
         <p className="about_text">
           Développeur web depuis maintenant 3 ans, je suis passionné par l’innovation technologique,

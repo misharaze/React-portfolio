@@ -5,7 +5,7 @@ import App from './App';
 
 const script1 = document.createElement("script");
 script1.async = true;
-script1.src = "https://www.googletagmanager.com/gtag/js?id=G-PH2Q81J313";
+script1.src = "https://www.googletagmanager.com/gtag/js?id=G-NVV5VKD53Z";
 document.head.appendChild(script1);
 
 const script2 = document.createElement("script");
@@ -13,7 +13,7 @@ script2.innerHTML = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-PH2Q81J313');
+  gtag('config', 'G-NVV5VKD53Z');
 `;
 document.head.appendChild(script2);
 // === Конец Google Analytics ===

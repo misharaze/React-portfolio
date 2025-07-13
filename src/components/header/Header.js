@@ -19,7 +19,7 @@ const Header = () => {
         <div className="header__left-block">
           <h1 className="header__title">
             <strong>
-              Bonjour je m'appelle <em>Mish</em>
+              Bonjour je m'appelle <em>Misha</em>
             </strong>
           </h1>
 

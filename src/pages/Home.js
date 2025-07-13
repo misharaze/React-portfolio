@@ -220,7 +220,7 @@ const handleNavigate = (projects) => {
  
 
           <div id='count_data' className='count_data'>
-          <div class="about-counter-area d-flex h-100">
+          <div className="about-counter-area d-flex h-100">
 		<div className="container h-100 d-flex align-items-center justify-content-center align-middle">
 			<div className="row align-items-center justify-content-center align-middle">
 				<div className="col-md-3 text-center">

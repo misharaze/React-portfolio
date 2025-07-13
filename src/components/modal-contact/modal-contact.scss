@@ -5,7 +5,7 @@
     z-index:1050;
     display:flex;
     width:100vw;
-    height:100vw;
+    height:100vh;
     //overflow:hidden;
     background-color:rgba(0,0,0,.5)}
 
@@ -23,7 +23,12 @@ border-radius:4px;
 max-height:80vh;
 //overflow-y:auto
 }
-
+.modal__input,
+.modal .btn {
+  width: 80%;
+  max-width: 280px;
+  min-width: 200px;
+}
 
 .modal__close{
     position:absolute;top:8px;

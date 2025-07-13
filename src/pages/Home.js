@@ -1,4 +1,4 @@
-import './Home.css';
+import './Home.scss';
 import {motion } from 'framer-motion'
 import { Card } from "react-bootstrap";
 import { FaComputer } from "react-icons/fa6";

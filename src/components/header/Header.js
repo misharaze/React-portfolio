@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Header.css";
+import "./Header.scss";
 import Modalcontact from "../modal-contact/modal-contact";
 import Carousel from "react-bootstrap/Carousel";
 import {
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="header__left-block">
           <h1 className="header__title">
             <strong>
-              Bonjour je m'appelle <em>Misha</em>
+              Bonjour je m'appelle <em>Mish</em>
             </strong>
           </h1>
 

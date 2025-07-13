@@ -1,5 +1,5 @@
 import './Home.css';
-
+import {motion } from 'framer-motion'
 import { Card } from "react-bootstrap";
 import { FaComputer } from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa"
@@ -30,6 +30,7 @@ import Bootstrap from '.././img/icons/bootstrap.png';
 import Vitrine from '.././img/projects/sitevitrine.jpg'
 import Commerce from '.././img/projects/e-commerce.jpg'
 import admin from '.././img/projects/pannel admin.png'
+import Landing from '.././img/projects/landing2.jpg'
 import {SKILLS_ROUTE} from '../utils/consts.js'
 import { useNavigate } from 'react-router-dom';
 import code from '../img/mobileApp/code.png'
@@ -52,62 +53,72 @@ const handleNavigate = (projects) => {
       
   
         <section className="about">
-        <Card className='about_card'>
-            <div className="container">
+  <Card className="about_card">
+    <div className="container">
+      {/* Блок описания */}
+      <div className="about_descr">
+        <div className="title title_fz16about about_title">à propos de moi</div>
+        <div className="title title_fz36 about_subtitle">je m'appelle misha</div>
+        <div className="divider"></div>
+        <p className="about_text">
+          Développeur web depuis maintenant 3 ans, je suis passionné par l’innovation technologique,
+          toujours à la recherche de nouvelles technologies et nouvelles techniques de développement.
+          Fasciné par les dernières tendances en développement web, je suis toujours prêt à relever de
+          nouveaux défis pour satisfaire au mieux la demande de mon client.
+        </p>
+      </div>
 
-            <div class="about_descr">
-<div className=" title title_fz16about about_title">à propos de moi</div>
-<div className="title title_fz36 about_subtitle">je m'appelle mish</div>
-<div className="divider"></div>
-
-<p class="about_text">Développeur web depuis maintenant 3 ans , je suis passionné par l’innovation technologique , toujours à la recherche de nouvelles technologies et nouvelles techniques de dévellopement . Fasciné par les dernières tendances en développement web, je suis  toujours prêt à relever de nouveaux défis pour satisfaire au mieux la demande de mon client.
-.</p>
-
-</div>
-
-            <div className="about_skills">
-            <div className="about_skills-item">
-                <div className="about_skills-circle">
-                <FaComputer />
-                </div>
-                <div className="title title_fz14">
-                    web dévellopeur
-                </div>
-                <div className="about_skills-text">
-                j’ai acquis une expertise solide dans la conception et le développement d’applications web et mobiles, maîtrisant des langages tels que HTML, CSS, Bootstrap, WordPress avec Elementor, ainsi que node.js pour le coté backend.
-                </div>
-            </div>
-
-            <div className="about_skills-item">
-                <div className="about_skills-circle">
-                <FaMobileAlt />
-                </div>
-                <div className="title title_fz14">
-                    dévellopement d'application mobile
-                </div>
-                <div className="about_skills-text">
-                La maîtrise de ces compétences m'as permis  de créer des applications réactives, évolutives et riches en fonctionnalités qui répondent aux exigences de mes clients.
-                </div>
-            </div>
-
-            <div className="about_skills-item">
-                <div className="about_skills-circle">
-                <IoLogoDesignernews />
-                </div>
-                <div className="title title_fz14">
-                    UI/UX design
-                </div>
-                <div className="about_skills-text">
-                UX est l’abréviation d’expérience utilisateur, c’est-à-dire l’impression globale et la satisfaction que votre application procure aux utilisateurs. j'ai acquis es compétences nécessaires capable de concevoir une application attrayante, intuitive, réactive et accessible
-                </div>
-            </div>
+      {/* Анимация блока скиллов */}
+      <motion.div
+        className="about_skills"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
+      >
+        {/* Скилл: Web Developer */}
+        <div className="about_skills-item">
+          <div className="about_skills-circle">
+            <FaComputer />
+          </div>
+          <div className="title title_fz14">web dévellopeur</div>
+          <div className="about_skills-text">
+            j’ai acquis une expertise solide dans la conception et le développement d’applications web
+            et mobiles, maîtrisant des langages tels que HTML, CSS, Bootstrap, WordPress avec Elementor,
+            ainsi que node.js pour le côté backend.
+          </div>
         </div>
-                 
-            </div>
-            </Card>
 
-        </section>
-        <section className="resume">
+        {/* Скилл: Mobile App */}
+        <div className="about_skills-item">
+          <div className="about_skills-circle">
+            <FaMobileAlt />
+          </div>
+          <div className="title title_fz14">développement d'application mobile</div>
+          <div className="about_skills-text">
+            La maîtrise de ces compétences m'a permis de créer des applications réactives, évolutives
+            et riches en fonctionnalités qui répondent aux exigences de mes clients.
+          </div>
+        </div>
+
+        {/* Скилл: UI/UX */}
+        <div className="about_skills-item">
+          <div className="about_skills-circle">
+            <IoLogoDesignernews />
+          </div>
+          <div className="title title_fz14">UI/UX design</div>
+          <div className="about_skills-text">
+            UX est l’abréviation d’expérience utilisateur, c’est-à-dire l’impression globale et la
+            satisfaction que votre application procure aux utilisateurs. J'ai acquis les compétences
+            nécessaires pour concevoir une application attrayante, intuitive, réactive et accessible.
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </Card>
+</section>
+
+<section className="resume">
     <Card className="about_card">
         <div className="container">
             <h2 className="title title_fz16-resume resume_title-circle">compétences</h2>
@@ -116,7 +127,7 @@ const handleNavigate = (projects) => {
 
             <div className="resume__wrapper">
                 <div className="resume_column">
-                    <h3 className="title title_fz20 resume_column-title">études</h3>
+                    <h3 className="title title_fz20 resume_column-title">Formation intensive</h3>
                     <ul>
                         <li>
                             <div className="resume_item">
@@ -128,7 +139,7 @@ const handleNavigate = (projects) => {
                                     <div className="resume_item-location">Paris</div>
                                 </div>
                                 <div className="resume_item-body">
-                                    ALT-RH CONSULTING est un organisme de formation, ou j'ai effectuer ma formations de développeur web et web mobile
+                                    Formation diplômante en Développement Web et Web Mobile : HTML, CSS, JavaScript, React, Node.js, Git. Approche full-stack centrée sur la pratique et l'intégration professionnelle.
                                 </div>
                             </div>
                         </li>
@@ -136,7 +147,7 @@ const handleNavigate = (projects) => {
                 </div>
 
                 <div className="resume_column">
-                    <h3 className="title title_fz20 resume_column-title">études</h3>
+                    <h3 className="title title_fz20 resume_column-title">Formation universitaire</h3>
                     <ul>
                         <li>
                             <div className="resume_item">
@@ -144,11 +155,53 @@ const handleNavigate = (projects) => {
                                     <div className="resume_item-icon">
                                         <img src="icons/experience/university.svg" alt="university" />
                                     </div>
-                                    <h4 className="title title_fz14">licences langues étrangère appliquer</h4>
-                                    <div className="resume_item-location">paris</div>
+                                    <h4 className="title title_fz14">Université – Langues étrangères appliquées</h4>
+                                    <div className="resume_item-location">Paris</div>
                                 </div>
                                 <div className="resume_item-body">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et itaque corrupti nesciunt laudantium doloremque eos, quae pariatur ratione vitae aut. Consectetur, autem. Vero delectus asperiores fuga, facere natus tempore ad!
+                                    Deux ans d'études universitaires en langues et communication interculturelle. Solide capacité d'analyse, de travail autonome et rigueur dans la gestion de projets.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div className="resume__wrapper">
+                <div className="resume_column">
+                    <h3 className="title title_fz20 resume_column-title">Autodidacte</h3>
+                    <ul>
+                        <li>
+                            <div className="resume_item">
+                                <div className="resume_item-head">
+                                    <div className="resume_item-icon">
+                                        <img src="icons/experience/skills.svg" alt="skills" />
+                                    </div>
+                                    <h4 className="title title_fz14">Apprentissage personnel</h4>
+                                    <div className="resume_item-location">En ligne</div>
+                                </div>
+                                <div className="resume_item-body">
+                                    Étude approfondie de frameworks modernes (React, Next.js), mise à jour constante de mes compétences via des ressources comme MDN, FreeCodeCamp, et Udemy.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="resume_column">
+                    <h3 className="title title_fz20 resume_column-title">Projets personnels</h3>
+                    <ul>
+                        <li>
+                            <div className="resume_item">
+                                <div className="resume_item-head">
+                                    <div className="resume_item-icon">
+                                        <img src="icons/experience/project.svg" alt="project" />
+                                    </div>
+                                    <h4 className="title title_fz14">Mise en pratique</h4>
+                                    <div className="resume_item-location">Projet indépendant</div>
+                                </div>
+                                <div className="resume_item-body">
+                                    Réalisation de plusieurs projets web (sites vitrines, applications React, systèmes de formulaires dynamiques), avec une attention particulière à l'UX/UI et à la responsivité.
                                 </div>
                             </div>
                         </li>
@@ -156,52 +209,8 @@ const handleNavigate = (projects) => {
                 </div>
             </div>
         </div>
-        
-          <div className="resume__wrapper">
-                <div className="resume_column">
-                    <h3 className="title title_fz20 resume_column-title">études</h3>
-                    <ul>
-                        <li>
-                            <div className="resume_item">
-                                <div className="resume_item-head">
-                                    <div className="resume_item-icon">
-                                        <img src="icons/experience/university.svg" alt="university" />
-                                    </div>
-                                    <h4 className="title title_fz14">ALT-RH CONSULTING</h4>
-                                    <div className="resume_item-location">Paris</div>
-                                </div>
-                                <div className="resume_item-body">
-                                    ALT-RH CONSULTING est un organisme de formation, ou j'ai effectuer ma formations de développeur web et web mobile
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="resume_column">
-                    <h3 className="title title_fz20 resume_column-title">études</h3>
-                    <ul>
-                        <li>
-                            <div className="resume_item">
-                                <div className="resume_item-head">
-                                    <div className="resume_item-icon">
-                                        <img src="icons/experience/university.svg" alt="university" />
-                                    </div>
-                                    <h4 className="title title_fz14">licences langues étrangère appliquer</h4>
-                                    <div className="resume_item-location">paris</div>
-                                </div>
-                                <div className="resume_item-body">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et itaque corrupti nesciunt laudantium doloremque eos, quae pariatur ratione vitae aut. Consectetur, autem. Vero delectus asperiores fuga, facere natus tempore ad!
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-       
     </Card>
 </section>
-  
 
 
  <section className='score'>
@@ -219,7 +228,7 @@ const handleNavigate = (projects) => {
 
 					<div classname="single-counter">
                         <AnimatedNumber className='countNumberA'
-                        value={1444}
+                        value={10}
                         formatValue={v=>v.toFixed(0)}
                         duration={7000}
                         />			
@@ -237,7 +246,7 @@ const handleNavigate = (projects) => {
                         formatValue={v=>v.toFixed(0)}
                         duration={3000}
                         />							
-                        <p className='countNumber'>récompense</p>
+                        <p className='countNumber'>Site vitrine</p>
 					</div>
 				</div>
 
@@ -246,11 +255,11 @@ const handleNavigate = (projects) => {
 
 					<div className="single-counter">
 						<AnimatedNumber className='countNumberA'
-                        value={11}
+                        value={7}
                         formatValue={v=>v.toFixed(0)}
                         duration={2000}
                         />	
-						<p className='countNumber'>projet accomplis</p>
+						<p className='countNumber'>Site totale </p>
 					</div>
 				</div>
 
@@ -259,11 +268,11 @@ const handleNavigate = (projects) => {
 
 					<div className="single-counter">
                         <AnimatedNumber className='countNumberA'
-                        value={5689}
+                        value={8}
                         formatValue={v=>v.toFixed(0)}
                         duration={5500}
                         />							
-                        <p className='countNumber'>tasse de café</p>
+                        <p className='countNumber'>Projet accomplis</p>
 					</div>
 				</div>
 			</div>
@@ -433,7 +442,7 @@ const handleNavigate = (projects) => {
             <img src="img/plans.jpg" alt="test" />
         </a>
         <a href="#" className="portfolio__item">
-            <img src="img/ipad.jpg" alt="test" />
+            <img src={Landing} alt="test" />
         </a>
         <a href="#" className="portfolio__item horizonal"
         

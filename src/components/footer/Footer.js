@@ -26,9 +26,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-social">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/misharaze" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/devellopeurwebmobile" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
         <div className="footer-bottom">
           <p>&copy; 2024 tout droit réserver. Fait avec passions .</p>

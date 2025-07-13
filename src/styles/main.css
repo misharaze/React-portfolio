@@ -112,17 +112,25 @@ min-height: 100vh;
 
 /* Nav */
 
-.nav {
-	padding: 20px 0;
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+
+	padding: 20px 120px;
 	background-color: var(--nav-bg);
 	border-bottom: 1px solid var(--nav-border);
 	color: var(--nav-text);
+	backdrop-filter: blur(10px);
+	
 	letter-spacing: normal;
 }
 
 .nav-row {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
 	column-gap: 30px;
 	row-gap: 20px;
@@ -176,6 +184,43 @@ min-height: 100vh;
 	width: 100%;
 	background-color: var(--accent);
 }
+@media (max-width: 768px) {
+	.nav-list {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--nav-bg);
+		row-gap: 40px;
+		padding: 20px;
+		z-index: 999;
+		transform: translateY(-100%);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.nav-list.open {
+		transform: translateY(0);
+	}
+
+	.hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 5px;
+		cursor: pointer;
+		z-index: 1001;
+	}
+
+	.hamburger div {
+		width: 25px;
+		height: 3px;
+		background-color: var(--nav-text);
+	}
+}
 
 /* Dark mode btn */
 
@@ -223,7 +268,7 @@ min-height: 100vh;
 /* Header */
 
 .header {
-	padding: 40px 0;
+	padding: 180px 120px;
 	min-height: 695px;
 
 	display: flex;
@@ -235,7 +280,7 @@ min-height: 100vh;
 	background-repeat: no-repeat;
 	background-size: auto;
 	background-position: center center;
-
+	margin-top: 80px;
 	color: var(--header-text);
 	text-align: center;
 }

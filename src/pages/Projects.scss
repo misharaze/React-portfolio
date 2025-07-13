@@ -35,6 +35,7 @@ color: grey;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .project-card:hover {

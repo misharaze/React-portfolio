@@ -1,7 +1,11 @@
 import './skills.scss'
 import Card from '../components/skills-card/skills-card';
+import { useState , useRef, useEffect} from 'react';
 
 const Projects = () => {
+    const ratingsRef = useRef(null);
+    const [animate, setAnimate] = useState(false)
+
     const cardData = [
         { title: "Réalisation de projets", items: ["site vitrine", "site e-commerce", "applications mobile"] },
         { title: "Applications et interface administrateurs", items: ["PostgreSQL", "Node.js", "MongoDB","pgAdmin"] },
@@ -10,14 +14,43 @@ const Projects = () => {
         { title: "Adaptabilité à tout les supports (responsive design)", items: ["tablettes", "téléphone mobile", "ordinateur "] },
        
       ];
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setAnimate(true);
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
     
-
+        if (ratingsRef.current) {
+          observer.observe(ratingsRef.current);
+        }
+    
+        return () => {
+          if (ratingsRef.current) observer.unobserve(ratingsRef.current);
+        };
+      }, []);
+    
+      const ratingValues = [
+        { label: "Créations de sites Web", value: "100%", title: "Créations de sites Web",items: ["site vitrine", "site e-commerce", "applications mobile"] },
+        { label: "Créations d'applications mobiles ", value: "70%",  title: "Créations d'applications mobiles ", },
+        { label: "Design Web", value: "60%", title: "Design web ", },
+        { label: "Référencement internet", value: "100%", title: "Code réalisé à la main", title: 'référencement internet' },
+        { label: "Sites e-commerce", value: "70%", title: 'Sites e-commerce' },
+        { label: "Site vitrine (une page)", value: "100%", title : 'Site vitrine ' },
+      ];
+    
 
     return ( 
 
 <main className="section">
         <div className="container">
-            <h2 className="title-skills"> Mes  Compétences</h2>
+            <h2 className="title-skills"> Mes Compétences</h2>
 
           
         </div>
@@ -30,63 +63,28 @@ const Projects = () => {
       ))}
     </div>
 
+    <div className="container2">
+        <div className="title-ratings">Mes compétences Générales</div>
 
-      <div className="container">
-        <div className='title-ratings'>Mes compétences Générales</div>
-      <div className="skills__ratings">
-
-               <div className="skills__ratings-item">
-                   <div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-                   <div className="skills__ratings-counter">100%</div>
-                   <div className="skills__ratings-line">
-                       <span></span>
-                   </div>
-               </div>
-   
-               <div className="skills__ratings-item">
-                   <div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-                   <div className="skills__ratings-counter">80%</div>
-                   <div className="skills__ratings-line">
-                       <span></span>
-                   </div>
-               </div>
-   
-               <div className="skills__ratings-item">
-                   <div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-                   <div className="skills__ratings-counter">80%</div>
-                   <div className="skills__ratings-line">
-                       <span></span>
-                   </div>
-               </div>
-   
-   
-               <div className="skills__ratings-item">
-                   <div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-                   <div className="skills__ratings-counter">100%</div>
-                   <div className="skills__ratings-line">
-                       <span></span>
-                   </div>
-               </div>
-   
-               <div className="skills__ratings-item">
-                   <div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-                   <div className="skills__ratings-counter">80%</div>
-                   <div className="skills__ratings-line">
-                       <span></span>
-                   </div>
-               </div>
-   
-               <div className="skills__ratings-item">
-                   <div className="title title_fz14 skills__ratings-title">Создание сайтов</div>
-                   <div className="skills__ratings-counter">80%</div>
-                   <div className="skills__ratings-line">
-                       <span></span>
-                   </div>
-               </div>
-           </div>
-           </div>
-           </main>
-
-     );
-}
+        <div className="skills__ratings" ref={ratingsRef}>
+          {ratingValues.map((item, idx) => (
+            <div key={idx} className="skills__ratings-item">
+              <div className="title title_fz14 skills__ratings-title">{item.title}</div>
+              <div className="skills__ratings-counter">{item.value}</div>
+              <div className="skills__ratings-line">
+                <span
+                  style={{
+                    width: animate ? item.value : '0%',
+                    transition: 'width 2s ease',
+                  }}
+                ></span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      </main>
+  );
+};
+ 
 export default Projects;

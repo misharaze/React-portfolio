@@ -5,9 +5,9 @@ import project02big from './../img/projects/02-big.jpg'
 import  vitrine from './../img/projects/sitevitrine.jpg'
 import project03big from './../img/projects/sitevitrine.jpg'
 import admin from './../img/projects/pannel admin.png'
-import project04big from './../img/projects/04-big.jpg'
-import project05 from './../img/projects/05.jpg'
-import project05big from './../img/projects/05-big.jpg'
+import project04big from './../img/projects/landing2.jpg'
+import project05 from './../img/projects/landing2.jpg'
+import project05big from './../img/projects/landing3.jpg'
 import project06 from './../img/projects/06.jpg'
 import project06big from './../img/projects/06-big.jpg'
 
@@ -26,7 +26,7 @@ import vsCodeIcon from './../img/icons/vsCode.png';
 import express from './../img/icons/express.png'
 
 const projects = [
-    {title : 'E-commerce site', Skills:' React, Node.js, postgres, CSS, HTML, ', img : commerce, gitHublink: 'https://githhub.com', imgbig :project01big,    description: 'Mobile application using React and Node.js with real-time features and push notifications.',
+    {title : 'E-commerce site', Skills:' React, Node.js, postgres, CSS, HTML, ', img : commerce, gitHublink: 'https://githhub.com', imgbig :project01big,    description: 'Site e-commerce complet avec catalogue de produits, panier,  authentification utilisateur. Construit avec React, Node.js, Express et PostgreSQL.',
         technologies: {
             frontend: [ <img src={ReactIcon} alt="VS Code Icon" />,  <img src={HtmlIcon} alt="VS Code Icon" />,
                 <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" /> 
@@ -37,8 +37,8 @@ const projects = [
             devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />, <img src={Github} alt="VS Code Icon" />, ]  
         } 
      },
-    {title : 'Gallerie art', Skills:' React, node.js', img : project02, gitHublink: 'https://githhub.com', imgbig :project02big ,
-        description: 'Mobile application using React and Node.js with real-time features and push notifications.',
+    {title : 'Applications mobile', Skills:' React Native, node.js', img : project02, gitHublink: 'https://githhub.com', imgbig :project02big ,
+        description: 'Application mobile multiplateforme développée avec React Native. Authentification, mises à jour en temps réel et notifications intégrées.',
         technologies: {
             frontend: [<img src={ReactIcon} alt="VS Code Icon" />,  <img src={HtmlIcon} alt="VS Code Icon" />,
                 <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />  ],
@@ -49,7 +49,7 @@ const projects = [
     },
     
     {title : 'Site vitrine', Skills:' Vue, Node.js, MongoDB', img : vitrine, gitHublink: 'https://githhub.com', imgbig :project03big ,
-        description: 'Showcase website built with Vue and Node.js with a MongoDB database for dynamic content management.',
+        description: 'Site vitrine moderne pour entreprise, construit avec React.js et Node.js pour une gestion dynamique du contenu',
         technologies: {
             frontend: [   <img src={HtmlIcon} alt="VS Code Icon" />,
                 <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
@@ -59,7 +59,7 @@ const projects = [
       },
 
     {title : 'Pannel administrateur',  Skills:' React Native', img : admin, gitHublink: 'https://githhub.com',imgbig :project04big,
-        description: 'Admin panel for mobile apps built with React Native, allowing easy management of mobile applications.',
+        description: 'Tableau de bord administrateur pour la gestion du contenu et des utilisateurs, développé avec React Native et PostgreSQL.',
         technologies: {
             frontend: [ <img src={ReactIcon} alt="VS Code Icon" />, <img src={HtmlIcon} alt="VS Code Icon" />,
                 <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" /> ],
@@ -68,7 +68,7 @@ const projects = [
         }
     
     },
-    {title : 'Landing',Skills:' HTML, SCSS, JS', img : project05, gitHublink: 'https://githhub.com',imgbig :project05big, description: 'Landing page created using HTML, SCSS, and JavaScript with smooth animations and SEO optimization.',
+    {title : 'Landing',Skills:' HTML, SCSS, JS', img : project05, gitHublink: 'https://githhub.com',imgbig :project05big, description: 'Page d’atterrissage animée et responsive, construite en HTML, SCSS et JavaScript, optimisée pour le SEO.',
         technologies: {
             frontend: [ <img src={HtmlIcon} alt="VS Code Icon" />,
                 <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],

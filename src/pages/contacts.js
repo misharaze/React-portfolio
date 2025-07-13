@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./contacts.scss";
 import { FaInstagramSquare, FaGithub, FaFacebook } from "react-icons/fa";
 import Logo from '../img/icons/web-dev.png'
+
 const Contacts = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -49,7 +50,7 @@ const Contacts = () => {
       <div className="container">
         <div className="contacts_wrapper">
           <div>
-            <img src={Logo} alt="web-dev" />
+            <img src={Logo} alt="#" />
           </div>
           <div className="contacts_descr">
             <h5 className="contacts_title">Contact</h5>

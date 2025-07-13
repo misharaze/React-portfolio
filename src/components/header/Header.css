@@ -1,5 +1,5 @@
 .header {
-	padding: 40px 0;
+	padding: 120px  120px;
 	min-height: 695px;
 
 	display: flex;
@@ -12,7 +12,7 @@
 	background-size: auto;
 	background-position: center center;
 	width: 100vw;
-	height: 100vh;
+
 
 	color: var(--header-text);
 	text-align: center;
@@ -50,11 +50,14 @@
 	margin-top: 0.5em;
 }
 .btn_white{
-	background-color:#fff
+	background-color:#fff;
+
   }
   .btn{
 	display:block;
 	width:280px;
 	margin:0 auto;
 	color: black;
+	
+	
 }

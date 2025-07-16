@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import "./contacts.scss";
 import { FaInstagramSquare, FaGithub, FaFacebook } from "react-icons/fa";
 import Logo from '../img/icons/web-dev.png'
+import { useLocation } from "react-router-dom";
 
 const Contacts = () => {
+  const location = useLocation();
+  const selectedPlan = location.state?.selectedPlan || '';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: '',
+    message: selectedPlan,
     privacyPolicy: false,
   });
 
@@ -19,6 +23,16 @@ const Contacts = () => {
       [name]: type === 'checkbox' ? checked : value,
     }));
   };
+
+  useEffect(() => {
+    if (selectedPlan) {
+      setFormData((prev) => ({
+        ...prev,
+        message: selectedPlan,
+      }));
+    }
+  }, [selectedPlan]);
+
 
   const submitData = async (e) => {
     e.preventDefault();
@@ -37,7 +51,7 @@ const Contacts = () => {
         name: '',
         email: '',
         phone: '',
-        message: '',
+        message: selectedPlan,
         privacyPolicy: false,
       });
     } else {

@@ -1,5 +1,6 @@
 import './Price.scss';
 import PriceCard from '../components/price-card/price-card';
+import { useNavigate } from 'react-router-dom';
 
 const prices = [
   {
@@ -48,6 +49,13 @@ const prices = [
 
 
 const Price = () => {
+const navigate = useNavigate()
+
+const handleSelectPlan = (plan) => {
+navigate('/contact', {state : {selectedPlan: plan }})
+
+
+};
 
     return ( 
 <>
@@ -70,7 +78,11 @@ const Price = () => {
     plan={price.plan}
     price={price.price}
     features={price.features}
+    onSelect={() => handleSelectPlan(`${price.plan} - ${price.price}`)}
   />
+        
+
+
   </div>
 ))}
 </div>

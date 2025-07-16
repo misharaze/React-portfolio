@@ -7,6 +7,8 @@ import { useLocation } from "react-router-dom";
 const Contacts = () => {
   const location = useLocation();
   const selectedPlan = location.state?.selectedPlan || '';
+  //const API_BASE = process.env.REACT_APP_API_URL || 'https://react-portfolio-ubep.onrender.com';
+
 
   const [formData, setFormData] = useState({
     name: '',
@@ -37,7 +39,7 @@ const Contacts = () => {
   const submitData = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/send', {
+    const response = await fetch('https://react-portfolio-ubep.onrender.com/send', {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json',

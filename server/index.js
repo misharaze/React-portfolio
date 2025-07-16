@@ -20,7 +20,7 @@ app.use(cors({
 
 app.use(bodyParser.json());
 
-app.get('/send', async ( req, res) => { //путь по которому передаються данные 
+app.post('/send', async ( req, res) => { //путь по которому передаються данные 
 const {name, email , message, phone} = req.body;//вытаскиваем все что нам надо из тела запроса
 
 

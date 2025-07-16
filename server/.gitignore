@@ -3,3 +3,4 @@ portfolio-react/node_modules
 server/.env
 server/files
 /node_modules.env
+.env

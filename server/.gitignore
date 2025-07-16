@@ -2,4 +2,4 @@ server/node_modules
 portfolio-react/node_modules
 server/.env
 server/files
-/node_modules
+/node_modules.env

@@ -40,7 +40,7 @@ const Projects = () => {
         { label: "Créations de sites Web", value: "100%", title: "Créations de sites Web",items: ["site vitrine", "site e-commerce", "applications mobile"] },
         { label: "Créations d'applications mobiles ", value: "70%",  title: "Créations d'applications mobiles ", },
         { label: "Design Web", value: "60%", title: "Design web ", },
-        { label: "Référencement internet", value: "100%", title: "Code réalisé à la main", title: 'référencement internet' },
+        { label: "Référencement internet", value: "100%", title: "Code réalisé à la main"},
         { label: "Sites e-commerce", value: "70%", title: 'Sites e-commerce' },
         { label: "Site vitrine (une page)", value: "100%", title : 'Site vitrine ' },
       ];

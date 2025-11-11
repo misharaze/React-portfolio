@@ -3,7 +3,7 @@ import './Projects.scss'
 import '../components/Buttonmix/Buttonmix.scss'
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import {PROJECTS_ROUTE} from '../utils/consts.js'
 
 const Project = () => {
@@ -12,28 +12,28 @@ const Project = () => {
     const allProjects = Object.values(projects).flat();
     //const project = allProjects[id];
     const project = allProjects.find(p => (p.id || p.title) === id);
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
 
-    const handleVisit = () => {
-        if (siteLink) {
-          window.open(siteLink, '_blank'); // откроет в новой вкладке
-        } else if (gitHublink) {
-          window.open(gitHublink, '_blank');
-        } else {
-          alert("Ссылки не найдены");
-        }
-      };
+    //const handleVisit = () => {
+      //  if (siteLink) {
+        //  window.open(siteLink, '_blank'); // откроет в новой вкладке
+       // } else if (gitHublink) {
+        //  window.open(gitHublink, '_blank');
+       // } else {
+       //   alert("Ссылки не найдены");
+       // }
+      //};
       
 
 
-    const handleGoBack = () => {
-        navigate('/projects'); // Возвращает на предыдущую страницу
-      };
+   // const handleGoBack = () => {
+      //  navigate('/projects'); // Возвращает на предыдущую страницу
+    //  };
 
     if (!project) {
         return <p>Projet non trouvé!</p>;
     }
-    const { title, images, description, Skills, gitHublink, siteLink } = project;
+    const { title, images, description,  gitHublink, siteLink } = project;
     return (
 
         

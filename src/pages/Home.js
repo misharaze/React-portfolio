@@ -19,7 +19,7 @@ import Js from '.././img/icons/js.png';
 import React from '.././img/icons/react.png';
 //import Sequelize from '.././img/icons/sequelize.png'
 import Vscode from '.././img/icons/vsCode.png';
-import Github from '.././img/icons/Github.png';
+import Github from '../img/icons/Github.png';
 import Mongodb from '.././img/icons/mongodb.png';
 import Webpack from '.././img/icons/webpack.png';
 import Postman from '.././img/icons/postman.png';

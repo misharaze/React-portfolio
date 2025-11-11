@@ -49,9 +49,12 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
     "file-loader": "^6.2.0",
     "resolve-url-loader": "^5.0.0",
-    "sass-loader": "^16.0.2"
+    "sass-loader": "^16.0.2",
+    "typescript": "^5.9.3"
   },
   "proxy": "http://localhost:3000/"
 }

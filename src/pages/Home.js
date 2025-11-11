@@ -19,7 +19,7 @@ import Js from '.././img/icons/js.png';
 import React from '.././img/icons/react.png';
 //import Sequelize from '.././img/icons/sequelize.png'
 import Vscode from '.././img/icons/vsCode.png';
-import Github from '../img/icons/github.svg';
+
 import Mongodb from '.././img/icons/mongodb.png';
 import Webpack from '.././img/icons/webpack.png';
 import Postman from '.././img/icons/postman.png';
@@ -386,7 +386,7 @@ const handleNavigate = (projects) => {
       <div class="arrow"></div>
       <div class="skills__items">
         <div class="skills__item">
-          <img src={Github} alt="Git" />
+         
           <h3 class="title title_fz14">Github</h3>
           <p>Systéme qui permet de </p>
         </div>

@@ -3,7 +3,7 @@ import vk from "./../../img/icons/vk.svg";
 import instagram from "./../../img/icons/instagram.svg";
 //import twitter from "./../../img/icons/twitter.svg";
 import Linkedin  from "./../../img/icons/Linkedin.png";
-import Github from "./../../img/icons/Github.png";
+//import Github from "./../../img/icons/Github.png";
 
 import React from 'react';
 import './Footer.css';
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="footer-social">
           <a href="https://github.com/misharaze" target="_blank" rel="noopener noreferrer">GitHub
- <img src={Github} alt="" />
+ 
 
 
           </a>

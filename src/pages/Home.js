@@ -19,7 +19,7 @@ import Js from '.././img/icons/js.png';
 import React from '.././img/icons/react.png';
 //import Sequelize from '.././img/icons/sequelize.png'
 import Vscode from '.././img/icons/vsCode.png';
-import Github from '.././img/icons/github.png';
+import Github from '.././img/icons/Github.png';
 import Mongodb from '.././img/icons/mongodb.png';
 import Webpack from '.././img/icons/webpack.png';
 import Postman from '.././img/icons/postman.png';
@@ -28,7 +28,7 @@ import Npm from '.././img/icons/npm.png';
 import Sass from '.././img/icons/sass.png';
 import Bootstrap from '.././img/icons/bootstrap.png';
 import Vitrine from '.././img/projects/sitevitrine.jpg'
-import Commerce from '.././img/projects/e-commerce.jpg'
+//import Commerce from '.././img/projects/e-commerce5.jpg'
 import admin from '.././img/projects/pannel admin.png'
 import Landing from '.././img/projects/landing2.jpg'
 import {SKILLS_ROUTE} from '../utils/consts.js'
@@ -37,6 +37,14 @@ import code from '../img/mobileApp/code.png'
 import platforme from '../img/mobileApp/iosandroid.png'
 import Design from '../img/mobileApp/uiDesign.png'
 import Performance from '../img/mobileApp/performance.png'
+import InfoHeader from '../components/InfoHeader/InfoHeader.tsx';
+import ecommerce from '../img/projects/e-commerce1.png'
+import Vitrine1 from '../img/projects/healthy1.png'
+import Vitrine2 from '../img/projects/microgreen1.png'
+import Vitrine3 from '../img/projects/donuts1.png'
+import Restaurant from "../img/projects/restaurant.png"
+import Hydroponics from "../img/projects/hydroponics.png"
+import Fitline from  "../img/projects/fitline.png"
 
 const Home = () => {
 const navigate = useNavigate()
@@ -50,6 +58,7 @@ const handleNavigate = (projects) => {
 
     return (
         <>
+   
         <Header /> 
       
   
@@ -410,55 +419,139 @@ const handleNavigate = (projects) => {
 
  
 
- <section className="portfolio">
-   <div className="container">   
-     <div className="title title_fz16 portfolio_title">Portfolio</div>    
-      <div className="title title_fz36 portfolio_subtitle">Mes réalisations</div>    
-       <div className="divider"></div>    
-        <div className="portfolio_wrapper">
+<section className="portfolio">
+  <div className="container">
+    <div className="title title_fz16 portfolio_title">Portfolio</div>
+    <div className="title title_fz36 portfolio_subtitle">Mes réalisations</div>
+    <div className="divider"></div>
 
-      
-        <a href="#" className="portfolio__item"
-        onClick={(e) => { 
-          e.preventDefault(); 
-          handleNavigate('/projects'); // Замените на нужный путь
-        }} >
-            <img src={Vitrine} alt="vitrine" /> 
-        </a>
-        <a href="#" className="portfolio__item"
-         onClick={(e) => { 
-          e.preventDefault(); 
-          handleNavigate('/projects'); // Замените на нужный путь
-        }}>
-            <img src={Commerce} alt="commerce" />
-         </a>
-        <a href="#" className="portfolio__item"
-         onClick={(e) => { 
-          e.preventDefault(); 
-          handleNavigate('/projects'); // Замените на нужный путь
-        }}>
-            <img src={admin} alt="test" />
-        </a>
-        <a href="#" className="portfolio__item vertical">
-            <img src="img/plans.jpg" alt="test" />
-        </a>
-        <a href="#" className="portfolio__item">
-            <img src={Landing} alt="test" />
-        </a>
-        <a href="#" className="portfolio__item horizonal"
-        
-        >
-            <img src="img/plans.jpg" alt="test" />
-         </a>
-        
+    {/* Категории фильтра */}
+    <div className="portfolio_filters">
+      <button className="filter active">Tous</button>
+      <button className="filter">E-commerce</button>
+      <button className="filter">Mobile</button>
+      <button className="filter">Landing</button>
+      <button className="filter">Vitrine</button>
     </div>
-   </div>
- </section>
+
+    <div className="portfolio_grid">
+      {/* Карточка проекта */}
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={ecommerce} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">bio shop</h4>
+          <p className="project_year">2024</p>
+          <span className="project_category">Site e-commerce</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Vitrine1} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">healthy food</h4>
+          <p className="project_year">2024</p>
+          <span className="project_category">Landing page</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Vitrine2} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">Microgreen</h4>
+          <p className="project_year">2024</p>
+          <span className="project_category"> site Vitrine</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Vitrine3} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">DonutsShop</h4>
+          <p className="project_year">2024</p>
+          <span className="project_category"> site Vitrine</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Restaurant} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">Site Vitrine</h4>
+          <p className="project_year">2025</p>
+          <span className="project_category">Vitrine</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Hydroponics} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">Site Vitrine</h4>
+          <p className="project_year">2024</p>
+          <span className="project_category">Vitrine</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Fitline} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">Plateforme professionnelle</h4>
+          <p className="project_year">2025</p>
+          <span className="project_category">Vitrine</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+      <div className="portfolio_card">
+        <div className="card_image">
+          <img src={Vitrine} alt="vitrine" />
+        </div>
+        <div className="card_content">
+          <h4 className="project_title">Site Vitrine</h4>
+          <p className="project_year">2024</p>
+          <span className="project_category">Vitrine</span>
+        </div>
+        <button className="view_button" onClick={() => handleNavigate('/projects')}>
+          Voir
+        </button>
+      </div>
+
+     
+    </div>
+  </div>
+</section>
 
 <section className='Mobile-app'>
 <div className="container">
 <h2 className='titlemobile'>Création d'applications mobile</h2>
 <p className='infos'>Utilisation de React native pour la création d'application mutliplateformes </p>
+
+<div className="divider"></div>
 
 <div className="features">
 

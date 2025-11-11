@@ -7,9 +7,25 @@ import { useNavigate } from 'react-router-dom';
 import {PROJECTS_ROUTE} from '../utils/consts.js'
 
 const Project = () => {
+  
     const { id } = useParams();
-    const project = projects[id];
+    const allProjects = Object.values(projects).flat();
+    //const project = allProjects[id];
+    const project = allProjects.find(p => (p.id || p.title) === id);
     const navigate = useNavigate();
+
+    const handleVisit = () => {
+        if (siteLink) {
+          window.open(siteLink, '_blank'); // откроет в новой вкладке
+        } else if (gitHublink) {
+          window.open(gitHublink, '_blank');
+        } else {
+          alert("Ссылки не найдены");
+        }
+      };
+      
+
+
     const handleGoBack = () => {
         navigate('/projects'); // Возвращает на предыдущую страницу
       };
@@ -17,14 +33,23 @@ const Project = () => {
     if (!project) {
         return <p>Projet non trouvé!</p>;
     }
-    const { title, imgbig, description, Skills, gitHublink } = project;
+    const { title, images, description, Skills, gitHublink, siteLink } = project;
     return (
+
+        
         <div className="project-details">
             <h2 className='titleproject'>{title}</h2>
-            <div className="carousel">
-                <img className='imgdetails' src={imgbig} alt={title} />
-                {/* Добавь карусель с изображениями при необходимости */}
-            </div>
+
+  <div className="image-gallery-wrapper">
+    <div className="carousel-grid">
+      {images.map((imgSrc, index) => (
+        <div className="image-card" key={index}>
+          <img src={imgSrc} alt={`${title} ${index + 1}`} className="carousel-image" />
+        </div>
+      ))}
+    </div>
+  </div>
+
             <h3 className='titledescr'>Description du projet</h3>
             <div className="description">
                 
@@ -75,12 +100,23 @@ const Project = () => {
            
             </div>
         </div>
-        <Link class="back-button" to={PROJECTS_ROUTE}>
-                      ← Revenir à la page précédente
-                     </Link>
-        </div>
-      
-    );
+
+        <div className="project-buttons-wrapper">
+  <div className="project-links">
+    <a href={siteLink} target="_blank" rel="noopener noreferrer" className="btn visit-btn">
+      🌐 Visiter le site
+    </a>
+    <a href={gitHublink} target="_blank" rel="noopener noreferrer" className="btn github-btn">
+      🛠️ GitHub
+    </a>
+  </div>
+</div>
+
+
+        <Link to={PROJECTS_ROUTE} className="back-btn">← Retour vers les projets </Link>
+      </div>
+   
+        )
 };
 
 export default Project;

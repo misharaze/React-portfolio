@@ -7,16 +7,21 @@ import {
   CardCarousel2,
   CardCarousel3,
 } from "../carrousel-card/carrousel-card";
+import InfoHeader from "../InfoHeader/InfoHeader.tsx";
 
 const Header = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
+  <>
+       
     <header className="header">
+  <InfoHeader/>
       <Modalcontact show={modalVisible} onHide={() => setModalVisible(false)} />
-
+     
       <div className="header__wrapper">
         <div className="header__left-block">
+   
           <h1 className="header__title">
             <strong>
               Bonjour je m'appelle <em>Misha</em>
@@ -54,6 +59,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 

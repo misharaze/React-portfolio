@@ -1,20 +1,21 @@
-import '../../pages/Projects.scss';
-
+import './Project.scss'
+import React from 'react';
 import { Link } from 'react-router-dom';  // Для перехода на страницу с подробностями
 
-const Project = ({ title, img, index }) => {
+const Project = ({project }) => {
+    const { title, img, id } = project;
     return (
         <li className="project-card">
             <div className="image-container">
                 <img src={img} alt={title} />
-                <div className="overlay">
+               
                     <h3>{title}</h3>
-                    <Link to={`/project/${index}`} className="more-info">
-                        <div className="circle">+</div>
-                        <span> Plus de détails </span>
-                    </Link>
+                    <Link to={`/project/${id || title}`} className="more-info">
+                    <div className="circle">+</div>
+                    <span> Plus de détails </span>
+                </Link>
                 </div>
-            </div>
+            
         </li>
     );
 };

@@ -1,0 +1,89 @@
+.info-bar {
+  position: fixed;
+  top: 80px; /* ниже хедера */
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-wrap: wrap; /* позволяет перенос строк */
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  height: auto;
+}
+
+.info-bar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.info-bar__left,
+.info-bar__right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info-bar__left span {
+  margin-right: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.info-bar__right a {
+  margin-left: 15px;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.info-bar__right a:hover {
+  color: #0077b5;
+}
+
+i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #888;
+}
+
+span {
+  white-space: nowrap;
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  .info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .info-bar__left,
+  .info-bar__right {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .info-bar__right {
+    flex-wrap: wrap;
+  }
+
+  .info-bar__right a {
+    margin: 5px 10px 0 0;
+  }
+}

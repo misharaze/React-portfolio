@@ -12,6 +12,7 @@ import Price from './pages/Price';
 import SplashScreen from'./components/splashscreen/splashscreen.js'
 import Faq from "./pages/Faq.js";
 import React, { useState, useEffect } from 'react';
+import InfoHeader from "./components/InfoHeader/InfoHeader.tsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,8 +21,8 @@ function App() {
   useEffect(() => {
     // Сымитируем загрузку данных с сервера
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000); // Задержка в 3 секунды для демонстрации
+          setLoading(false);
+            }, 5000); // Задержка в 3 секунды для демонстрации
 
     return () => clearTimeout(timer);
   }, []);
@@ -32,6 +33,7 @@ function App() {
 <Router>
 
 <Navbar/>
+<InfoHeader/>
 
 <Routes>
 

@@ -1,7 +1,7 @@
 
 import React from "react";
 import './InfoHeader.scss';
-//import Github from '../../img/icons/github.png';
+
 //import Instagram from '../../img/icons/instagram.png';
 //import Linkedin from '../../img/icons/Linkedin.png';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';

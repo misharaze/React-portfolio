@@ -69,7 +69,7 @@ import  HtmlIcon from './../img/icons/html.png';
 import  JsIcon from './../img/icons/js.png';
 import  NodejsIcon from './../img/icons/node.png';
 import  PostgresIcon from './../img/icons/postgres.png';
-import  Github from './../img/icons/Github.png';
+
 import  SequeliseIcon from './../img/icons/sequelize.png';
 import   FirebaseIcon from './../img/icons/firebase.png';
 //import reactnativeIcon from './../img/icons/reactnative.svg';
@@ -99,7 +99,7 @@ export const projects = {
                 backend: [<img src={express} alt="VS Code Icon" />,<img src={FirebaseIcon} alt="VS Code Icon" />,
                     <img src={NodejsIcon} alt="VS Code Icon" />
                 ],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />, <img src={Github} alt="VS Code Icon" />, ]  
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />, ]  
             } 
 
         },
@@ -116,7 +116,7 @@ export const projects = {
                 frontend: [ <img src={ReactIcon} alt="VS Code Icon" />, <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" /> ],
                 backend: [<img src={PostgresIcon} alt="VS Code Icon" />,  <img src={express} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />,  <img src={Github} alt="VS Code Icon" />,]
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />, ]
             }
         
         },
@@ -139,7 +139,7 @@ export const projects = {
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />  ],
                 backend: [<img src={express} alt="VS Code Icon" />,
                     <img src={NodejsIcon} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> ,<img src={Github} alt="VS Code Icon" />, ]
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />  ]
             }
         },
     ],
@@ -160,7 +160,7 @@ export const projects = {
                 frontend: [ <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
                 backend: [  <img src={express} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,] 
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , ] 
             }
     
          },
@@ -182,7 +182,7 @@ export const projects = {
                 frontend: [   <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
                 backend: [<img src={NodejsIcon} alt="VS Code Icon" />,],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,]
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , ]
             }
           },
 
@@ -201,7 +201,7 @@ export const projects = {
               frontend: [   <img src={HtmlIcon} alt="VS Code Icon" />,
                   <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
               backend: [<img src={NodejsIcon} alt="VS Code Icon" />,],
-              devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,]
+              devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , ,]
           }
         },
     ],
@@ -220,7 +220,7 @@ export const projects = {
                 frontend: [ <img src={ReactIcon} alt="VS Code Icon" />, <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" /> ],
                 backend: [<img src={PostgresIcon} alt="VS Code Icon" />,  <img src={express} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />,  <img src={Github} alt="VS Code Icon" />,]
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />, ]
             }
         
         },
@@ -242,7 +242,7 @@ export const projects = {
                 frontend: [ <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
                 backend: [  <img src={express} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,] 
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> ] 
             }
     
         },
@@ -263,7 +263,7 @@ export const projects = {
                 frontend: [ <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
                 backend: [  <img src={express} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,] 
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> ] 
             }
         }
     ],
@@ -284,7 +284,7 @@ export const projects = {
                 frontend: [   <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
                 backend: [<img src={NodejsIcon} alt="VS Code Icon" />,],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,]
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" />]
             }
           },
     ],
@@ -305,7 +305,7 @@ export const projects = {
                 frontend: [ <img src={HtmlIcon} alt="VS Code Icon" />,
                     <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
                 backend: [  <img src={express} alt="VS Code Icon" />],
-                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , <img src={Github} alt="VS Code Icon" />,] 
+                devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> ,] 
             }
     
         },

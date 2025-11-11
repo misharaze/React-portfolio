@@ -1,13 +1,11 @@
-import commerce from './../img/projects/e-commerce5.png'
-import project01big from './../img/projects/e-commerce5.png'
+
+
 import project02 from './../img/projects/02.jpg'
-import project02big from './../img/projects/02-big.jpg'
-import  vitrine from './../img/projects/sitevitrine.jpg'
-import project03big from './../img/projects/sitevitrine.jpg'
+
 import admin from './../img/projects/pannel admin.png'
-import project04big from './../img/projects/landing2.jpg'
+
 import project05 from './../img/projects/landing2.jpg'
-import project05big from './../img/projects/landing3.jpg'
+
 import project06 from './../img/projects/06.jpg'
 
 
@@ -56,13 +54,13 @@ import donuts3 from './../img/projects/donuts3.png'
 import donuts4 from './../img/projects/donuts4.png'
 import donuts5 from './../img/projects/donuts5.png'
 
-import healthy1 from './../img/projects/healthy1.png'
-import healthy2 from './../img/projects/healthy2.png'
-import healthy3 from './../img/projects/healthy3.png'
-import healthy4 from './../img/projects/healthy4.png'
+//import healthy1 from './../img/projects/healthy1.png'
+//import healthy2 from './../img/projects/healthy2.png'
+//import healthy3 from './../img/projects/healthy3.png'
+//import healthy4 from './../img/projects/healthy4.png'
 import healthy5 from './../img/projects/healthy5.png'
 
-import project06big from './../img/projects/06-big.jpg'
+
 import  ReactIcon  from './../img/icons/react.png';
 import  CssIcon from './../img/icons/css.png';
 import  HtmlIcon from './../img/icons/html.png';
@@ -70,9 +68,9 @@ import  JsIcon from './../img/icons/js.png';
 import  NodejsIcon from './../img/icons/node.png';
 import  PostgresIcon from './../img/icons/postgres.png';
 
-import  SequeliseIcon from './../img/icons/sequelize.png';
+
 import   FirebaseIcon from './../img/icons/firebase.png';
-//import reactnativeIcon from './../img/icons/reactnative.svg';
+
 
 import vsCodeIcon from './../img/icons/vsCode.png';
 import express from './../img/icons/express.png'
@@ -201,7 +199,7 @@ export const projects = {
               frontend: [   <img src={HtmlIcon} alt="VS Code Icon" />,
                   <img src={CssIcon} alt="VS Code Icon" />, <img src={JsIcon} alt="VS Code Icon" />],
               backend: [<img src={NodejsIcon} alt="VS Code Icon" />,],
-              devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , ,]
+              devops: [ <img src={vsCodeIcon} alt="VS Code Icon" /> , ]
           }
         },
     ],

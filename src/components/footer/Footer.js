@@ -1,5 +1,5 @@
 
-import vk from "./../../img/icons/vk.svg";
+//import vk from "./../../img/icons/vk.svg";
 import instagram from "./../../img/icons/instagram.svg";
 //import twitter from "./../../img/icons/twitter.svg";
 import Linkedin  from "./../../img/icons/Linkedin.png";

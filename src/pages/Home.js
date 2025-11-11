@@ -29,15 +29,15 @@ import Sass from '.././img/icons/sass.png';
 import Bootstrap from '.././img/icons/bootstrap.png';
 import Vitrine from '.././img/projects/sitevitrine.jpg'
 //import Commerce from '.././img/projects/e-commerce5.jpg'
-import admin from '.././img/projects/pannel admin.png'
-import Landing from '.././img/projects/landing2.jpg'
-import {SKILLS_ROUTE} from '../utils/consts.js'
+//import admin from '.././img/projects/pannel admin.png'
+//import Landing from '.././img/projects/landing2.jpg'
+//import {SKILLS_ROUTE} from '../utils/consts.js'
 import { useNavigate } from 'react-router-dom';
 import code from '../img/mobileApp/code.png'
 import platforme from '../img/mobileApp/iosandroid.png'
 import Design from '../img/mobileApp/uiDesign.png'
 import Performance from '../img/mobileApp/performance.png'
-import InfoHeader from '../components/InfoHeader/InfoHeader.tsx';
+//import InfoHeader from '../components/InfoHeader/InfoHeader.tsx';
 import ecommerce from '../img/projects/e-commerce1.png'
 import Vitrine1 from '../img/projects/healthy1.png'
 import Vitrine2 from '../img/projects/microgreen1.png'

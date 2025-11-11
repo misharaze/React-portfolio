@@ -76,9 +76,9 @@ const Contacts = () => {
               Vous pouvez me contacter via les réseaux sociaux
             </div>
             <div className="contacts_social">
-              <a href="#" className="contacts_link"><FaFacebook /></a>
-              <a href="#" className="contacts_link"><FaGithub /></a>
-              <a href="#" className="contacts_link"><FaInstagramSquare /></a>
+              <a href="https://www.facebook.com/?locale=fr_FR" className="contacts_link"><FaFacebook /></a>
+              <a href="https://github.com/misharaze/React-portfolio" className="contacts_link"><FaGithub /></a>
+              <a href="https://www.instagram.com/" className="contacts_link"><FaInstagramSquare /></a>
             </div>
             <div className="title title_fz14-contacts contacts_text">
               Laissez-moi vos coordonnées, je prendrai contact avec vous

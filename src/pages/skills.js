@@ -15,6 +15,10 @@ const Projects = () => {
        
       ];
       useEffect(() => {
+        const node = ratingsRef.current; // Capture the ref value
+      
+        if (!node) return;
+      
         const observer = new IntersectionObserver(
           entries => {
             entries.forEach(entry => {
@@ -26,15 +30,14 @@ const Projects = () => {
           },
           { threshold: 0.3 }
         );
-    
-        if (ratingsRef.current) {
-          observer.observe(ratingsRef.current);
-        }
-    
+      
+        observer.observe(node);
+      
         return () => {
-          if (ratingsRef.current) observer.unobserve(ratingsRef.current);
+          observer.unobserve(node); // Use captured node
         };
       }, []);
+      
     
       const ratingValues = [
         { label: "Créations de sites Web", value: "100%", title: "Créations de sites Web",items: ["site vitrine", "site e-commerce", "applications mobile"] },

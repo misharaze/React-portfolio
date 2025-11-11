@@ -6,7 +6,7 @@ const SplashScreen = () => {
   return (
     <div className='box' >
        <h1 className="spinner__text">vous y etes presque...</h1>
-    <img src={Logo}> Bienvenue</img>
+    <img src={Logo} alt="Company Logo" > Bienvenue</img>
       
     </div>
   );
